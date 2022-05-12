@@ -114,17 +114,27 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Evangelin.S
+RegisterNumber: 212221230025 
 */
-
-
-
+```
+module sr (q,qbar,s,r,clk);
+input s,r,clk;
+output q,qbar;
+wire nand1_out;
+wire nand2_out;
+nand(nand1_out,clk,s);
+nand(nand2_out,clk,r);
+nand(q,nand1_out,qbar);
+nand(qbar,nand2_out,q);
+endmodule
+```
 
 
 
 ### RTL LOGIC FOR FLIPFLOPS 
 
+![image](https://user-images.githubusercontent.com/94219798/168052154-b31c82e9-3b3d-4035-8636-3f1cb34a179b.png)
 
 
 
@@ -135,11 +145,69 @@ RegisterNumber:
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
+![image](https://user-images.githubusercontent.com/94219798/168052218-82ec262a-879b-47cc-9079-ffed20fbec35.png)
 
 
+### PROGRAM 2
+```
+module jk(q,qbar,k,j,clk);
+input j,k,clk;
+output q,qbar;
+wire nand1_out;
+wire nand2_out;
+nand(nand1_out,j,clk,qbar);
+nand(nand2_out,k,clk,q);
+nand(q,nand1_out,qbar,qbar);
+nand(qbar,nand2_out,q);
+endmodule
+
+```
+
+### RTL LOGIC FOR FLIPFLOPS
+![image](https://user-images.githubusercontent.com/94219798/168052444-d260cda3-a23d-4a85-8650-4a23b5ca342c.png)
+
+### TIMING DIGRAMS FOR FLIP FLOPS
+![image](https://user-images.githubusercontent.com/94219798/168052497-ba2a248d-aeb0-4c6b-a5e2-ba02564bdec5.png)
 
 
+### PROGRAM 3
+```
+module d(q,qbar,d1,clk);
+input d1,clk;
+output q,qbar;
+wire n1;
+wire n2;
+not(x,d1);
+nand(n1,clk,d1);
+nand(n2,clk,x);
+nand(q,n2,qbar);
+nand(qbar,n1,q);
+endmodule 
+```
 
+### RTL LOGIC FOR FLIPFLOPS
+![image](https://user-images.githubusercontent.com/94219798/168052965-554333a0-ccb8-404d-8c43-a0fbbe618dc3.png)
 
+### TIMING DIGRAMS FOR FLIP FLOPS
+![image](https://user-images.githubusercontent.com/94219798/168053034-5d470994-bb23-4279-ad94-8b7164e3d290.png)
+
+### PROGRAM 4
+```
+module tff(t,qbar,q,clk);
+input t,clk;
+output q,qbar;
+wire n1,n2;
+nand(n1,t,clk,qbar);
+nand(n2,clk,t,q);
+nand(q,n1,qbar);
+nand(qbar,n2,q);
+endmodule
+```
+
+### RTL LOGIC FOR FLIPFLOPS
+![image](https://user-images.githubusercontent.com/94219798/168053176-512da48c-0b15-4f37-a569-db85200f6399.png)
+### TIMING DIGRAMS FOR FLIP FLOPS
+![image](https://user-images.githubusercontent.com/94219798/168053217-4f54989b-f731-4c19-a387-11aff9243501.png)
 
 ### RESULTS 
+Thus implementation of SR,JK,D and T flipflops using nand gates are done sucessfully.
