@@ -110,7 +110,7 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 4.end the program.
 
-
+### SR FLIPFLOP:
 ### PROGRAM 1
 ```
 
@@ -147,7 +147,7 @@ endmodule
 
 ![image](https://user-images.githubusercontent.com/94219798/168052218-82ec262a-879b-47cc-9079-ffed20fbec35.png)
 
-
+### JK FLIPFLOP
 ### PROGRAM 2
 ```
 
@@ -174,7 +174,7 @@ endmodule
 ### TIMING DIGRAMS FOR FLIP FLOPS
 ![image](https://user-images.githubusercontent.com/94219798/168052497-ba2a248d-aeb0-4c6b-a5e2-ba02564bdec5.png)
 
-
+### D FLIPFLOP
 ### PROGRAM 3
 ```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
@@ -201,6 +201,7 @@ endmodule
 ### TIMING DIGRAMS FOR FLIP FLOPS
 ![image](https://user-images.githubusercontent.com/94219798/168053034-5d470994-bb23-4279-ad94-8b7164e3d290.png)
 
+### T FLIPFLOP
 ### PROGRAM 4
 ```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
